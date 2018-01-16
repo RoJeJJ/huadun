@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!-- This is default config! -->
+    <default-config>
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </default-config>
+
+    <named-config name="sqlserver">
+        <!--   加载驱动 -->
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!--  其中studio为数据库名称  -->
+        <property name="jdbcUrl">jdbc:sqlserver://localhost:1433;databaseName=LDC_DB</property>
+        <!--  连接用户名 -->
+        <property name="user">sa</property>
+        <!--  连接密码  -->
+        <!--<property name="password">aa123123</property>-->
+        <property name="password">#@$$#@!#%$#@WEr</property>
+
+
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">10</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </named-config>
+</c3p0-config>

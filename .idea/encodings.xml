@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/DDZExtension.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/DDZJoinRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/DDZLeaveRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/DismissResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/TrusteeshipHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/UserCallHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/UserFoldHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/UserPlayHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ddzExt/src/ddz/handler/UserReadyHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/LDCExtension.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/handler/DissolveResponseHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/handler/UserActionHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/handler/UserLeaveRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/handler/VHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldcExt/src/ldc/handler/VVHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ldc_http/src/LDCServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/Command.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/Constant.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/base/ISeat.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/base/ITable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ddz_game/DDZSeat.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ddz_game/DDZStatus.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ddz_game/DDZTable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ddz_game/PaiType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ldc_game/LDCStatus.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/master/ldc_game/LDCTable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/utils/DBUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/utils/HttpConnectionManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/model/src/sfs2x/utils/Utils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/ZoneExtension.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/CreateRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/DismissRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/GameRecordHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/OnDisconnectedHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/OnLoginHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/OnRoomAddedHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/OnRoomRemovedHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/OnZoneJoinHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/PingHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/RequestJoinRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/RoomRecordHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/SetAgentHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/UserCurRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sfs2x/handler/UserRoomHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/ldc/WEB-INF/classes/LDCServlet.class" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

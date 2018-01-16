@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="LDC_DB@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.7">
+    <root id="1">
+      <ServerType>standalone</ServerType>
+    </root>
+    <database id="2" parent="1" name="LDC_DB">
+      <ObjectId>7</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="4" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="7" parent="1" name="KouJiaZiDB">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="8" parent="1" name="ThreeTilesDB">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="9" parent="1" name="JDB_DB">
+      <ObjectId>8</ObjectId>
+    </database>
+    <database id="10" parent="1" name="s525514db0">
+      <ObjectId>13</ObjectId>
+    </database>
+    <database id="11" parent="1" name="ChessGameDB">
+      <ObjectId>14</ObjectId>
+    </database>
+    <database id="12" parent="1" name="QPProxyDB">
+      <ObjectId>15</ObjectId>
+    </database>
+    <database id="13" parent="1" name="ThirteenTilesDB">
+      <ObjectId>16</ObjectId>
+    </database>
+    <database id="14" parent="1" name="THTiles1DB">
+      <ObjectId>18</ObjectId>
+    </database>
+    <schema id="15" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2017-12-30.19:03:59.687</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="16" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="22" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="23" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="24" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="25" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="26" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="27" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <table id="28" parent="15" name="SystemStatusInfo">
+      <ObjectId>645577338</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:21:22.003</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-08.19:21:22.023</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="15" name="card_room">
+      <ObjectId>1413580074</ObjectId>
+      <CreatedTimestamp>2017-12-13.22:02:49.560</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-13.22:02:49.663</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="15" name="gameRecord">
+      <ObjectId>1813581499</ObjectId>
+      <CreatedTimestamp>2017-12-21.23:07:17.260</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-21.23:07:17.373</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="15" name="roomRecord">
+      <ObjectId>1733581214</ObjectId>
+      <CreatedTimestamp>2017-12-21.00:48:17.400</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-21.00:48:17.510</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="15" name="user_info">
+      <ObjectId>1877581727</ObjectId>
+      <CreatedTimestamp>2017-12-25.22:07:56.167</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-25.22:07:56.310</ModifiedTimestamp>
+    </table>
+    <table id="33" parent="15" name="vvip">
+      <ObjectId>1781581385</ObjectId>
+      <CreatedTimestamp>2017-12-21.19:07:57.507</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-21.19:07:57.613</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="15" name="xy_agent">
+      <ObjectId>1957582012</ObjectId>
+      <CreatedTimestamp>2017-12-25.22:39:44.573</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-25.22:39:44.593</ModifiedTimestamp>
+    </table>
+    <routine id="35" parent="15" name="RecordSignIn">
+      <ObjectId>805577908</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:40:39.077</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-08.19:42:22.083</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="36" parent="15" name="RecordSignOut">
+      <ObjectId>821577965</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:41:51.393</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-08.19:41:51.393</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="37" parent="15" name="VerifyAccounts">
+      <ObjectId>757577737</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:28:31.207</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-28.21:59:35.240</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="38" parent="15" name="cost_card">
+      <ObjectId>1173579219</ObjectId>
+      <CreatedTimestamp>2017-12-11.19:37:24.963</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-14.02:29:36.340</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="39" parent="15" name="deleteRecord">
+      <ObjectId>2085582468</ObjectId>
+      <CreatedTimestamp>2017-12-30.02:41:04.627</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-30.02:47:22.827</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="40" parent="15" name="lockCard">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:55:53.813</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-14.20:04:13.673</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="41" parent="15" name="query_room">
+      <ObjectId>1429580131</ObjectId>
+      <CreatedTimestamp>2017-12-14.01:49:47.693</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-14.19:11:31.880</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="42" parent="15" name="setAgent">
+      <ObjectId>1941581955</ObjectId>
+      <CreatedTimestamp>2017-12-25.22:38:19.920</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-25.23:32:10.257</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <column id="43" parent="28" name="StatusName">
+      <Position>1</Position>
+      <Comment>状态名字</Comment>
+      <DataType>nvarchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="28" name="StatusValue">
+      <Position>2</Position>
+      <Comment>状态数值</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="28" name="StatusString">
+      <Position>3</Position>
+      <Comment>状态字符</Comment>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>nvarchar(512)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="28" name="StatusTip">
+      <Position>4</Position>
+      <Comment>状态显示名称</Comment>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>nvarchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="28" name="StatusDescription">
+      <Position>5</Position>
+      <Comment>字符的描述</Comment>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>nvarchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="28" name="SortID">
+      <Position>6</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="49" parent="28" name="PK_SystemStatusInfo">
+      <Position>1</Position>
+      <ColNames>StatusName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="28" name="PK_SystemStatusInfo">
+      <ObjectId>661577395</ObjectId>
+      <CreatedTimestamp>2017-12-08.19:21:22.007</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-08.19:21:22.007</ModifiedTimestamp>
+      <ColNames>StatusName</ColNames>
+      <UnderlyingIndexName>PK_SystemStatusInfo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="51" parent="29" name="roomName">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="29" name="uuid">
+      <Position>2</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="29" name="create_time">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="29" name="mod">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="29" name="owner">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="29" name="cost">
+      <Position>6</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="29" name="deducted">
+      <Position>7</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="29" name="destroyed">
+      <Position>8</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="30" name="name">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="30" name="uuid">
+      <Position>2</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="30" name="mod">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="30" name="u0">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="30" name="a0">
+      <Position>5</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="30" name="s0">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="30" name="wl0">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="30" name="u1">
+      <Position>8</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="30" name="a1">
+      <Position>9</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="30" name="s1">
+      <Position>10</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="30" name="wl1">
+      <Position>11</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="30" name="u2">
+      <Position>12</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="30" name="a2">
+      <Position>13</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="30" name="s2">
+      <Position>14</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="30" name="wl2">
+      <Position>15</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="30" name="u3">
+      <Position>16</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="30" name="a3">
+      <Position>17</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="30" name="s3">
+      <Position>18</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="30" name="wl3">
+      <Position>19</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="30" name="u4">
+      <Position>20</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="30" name="a4">
+      <Position>21</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="30" name="s4">
+      <Position>22</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="30" name="wl4">
+      <Position>23</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="30" name="u5">
+      <Position>24</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="30" name="a5">
+      <Position>25</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="30" name="s5">
+      <Position>26</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="30" name="wl5">
+      <Position>27</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="30" name="record">
+      <Position>28</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="30" name="create_time">
+      <Position>29</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="30" name="count">
+      <Position>30</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="31" name="name">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="31" name="uuid">
+      <Position>2</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="31" name="mod">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="31" name="u0">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="31" name="s0">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="31" name="wl0">
+      <Position>6</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="31" name="u1">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="31" name="s1">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="31" name="wl1">
+      <Position>9</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="31" name="u2">
+      <Position>10</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="31" name="s2">
+      <Position>11</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="31" name="wl2">
+      <Position>12</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="31" name="u3">
+      <Position>13</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="31" name="s3">
+      <Position>14</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="31" name="wl3">
+      <Position>15</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="104" parent="31" name="u4">
+      <Position>16</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="31" name="s4">
+      <Position>17</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="31" name="wl4">
+      <Position>18</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="31" name="u5">
+      <Position>19</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="31" name="s5">
+      <Position>20</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="31" name="wl5">
+      <Position>21</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="31" name="create_time">
+      <Position>22</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="31" name="tcount">
+      <Position>23</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="31" name="ccount">
+      <Position>24</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <trigger id="113" parent="31" name="tgr_roomRecord_delete">
+      <ObjectId>1749581271</ObjectId>
+      <CreatedTimestamp>2017-12-21.00:48:17.507</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-21.00:48:17.507</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="114" parent="32" name="userid">
+      <Position>1</Position>
+      <SequenceIdentity>100100</SequenceIdentity>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="32" name="openid">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="32" name="nickname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="32" name="gender">
+      <Position>4</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="32" name="avatar">
+      <Position>5</Position>
+      <DataType>varchar(max)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="32" name="ip">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="32" name="nullity">
+      <Position>7</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="32" name="card">
+      <Position>8</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="32" name="lockcard">
+      <Position>9</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="32" name="gold">
+      <Position>10</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="32" name="score">
+      <Position>11</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="32" name="win_count">
+      <Position>12</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="32" name="lose_count">
+      <Position>13</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="32" name="draw_count">
+      <Position>14</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="32" name="flee_count">
+      <Position>15</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="32" name="loggedIn">
+      <Position>16</Position>
+      <DataType>tinyint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="32" name="RegisterDate">
+      <Position>17</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="32" name="LastLogonDate">
+      <Position>18</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="132" parent="32" name="LastLogoutDate">
+      <Position>19</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="133" parent="32" name="parentId">
+      <Position>20</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="134" parent="32" name="PK_user_info">
+      <Position>1</Position>
+      <ColNames>userid</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="135" parent="32" name="PK_user_info">
+      <ObjectId>1925581898</ObjectId>
+      <CreatedTimestamp>2017-12-25.22:07:56.310</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-25.22:07:56.310</ModifiedTimestamp>
+      <ColNames>userid</ColNames>
+      <UnderlyingIndexName>PK_user_info</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="136" parent="33" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="137" parent="33" name="uid">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="138" parent="33" name="create_time">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="139" parent="33" name="update_time">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="140" parent="33" name="PK_vvip">
+      <Position>1</Position>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="141" parent="33" name="PK_vvip">
+      <ObjectId>1797581442</ObjectId>
+      <CreatedTimestamp>2017-12-21.19:07:57.613</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-21.19:07:57.613</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK_vvip</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="142" parent="34" name="id">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="143" parent="34" name="snid">
+      <Position>2</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="144" parent="34" name="nickname">
+      <Position>3</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="145" parent="34" name="amount">
+      <Position>4</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="146" parent="34" name="ParentID">
+      <Position>5</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="147" parent="34" name="nullity">
+      <Position>6</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="148" parent="34" name="loginip">
+      <Position>7</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="149" parent="34" name="telephone">
+      <Position>8</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="150" parent="34" name="usersite">
+      <Position>9</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="151" parent="34" name="logintime">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="152" parent="34" name="temporary">
+      <Position>11</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="153" parent="34" name="pic">
+      <Position>12</Position>
+      <DefaultExpression>&apos;/images/users.png&apos;</DefaultExpression>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="154" parent="34" name="password">
+      <Position>13</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="155" parent="34" name="code">
+      <Position>14</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="156" parent="34" name="SessionID">
+      <Position>15</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="157" parent="34" name="divide">
+      <Position>16</Position>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="158" parent="34" name="PK__xy_agent__3213E83FFA23298C">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="159" parent="34" name="PK__xy_agent__3213E83FFA23298C">
+      <ObjectId>1973582069</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-12-25.22:39:44.573</CreatedTimestamp>
+      <ModifiedTimestamp>2017-12-25.22:39:44.573</ModifiedTimestamp>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>PK__xy_agent__3213E83FFA23298C</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <argument id="160" parent="35" name="@wUserid">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="161" parent="36" name="@wUserid">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="162" parent="37" name="@wOpenid">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+    </argument>
+    <argument id="163" parent="37" name="@wNickname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </argument>
+    <argument id="164" parent="37" name="@wSex">
+      <Position>3</Position>
+      <DataType>tinyint|0</DataType>
+    </argument>
+    <argument id="165" parent="37" name="@wHeadimgurl">
+      <Position>4</Position>
+      <DataType>varchar(max)|0</DataType>
+    </argument>
+    <argument id="166" parent="37" name="@wIp">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </argument>
+    <argument id="167" parent="38" name="@uuid">
+      <Position>1</Position>
+      <DataType>varchar(150)|0</DataType>
+    </argument>
+    <argument id="168" parent="38" name="@uid">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="169" parent="38" name="@cost">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+    </argument>
+    <argument id="170" parent="40" name="@id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="171" parent="40" name="@card">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+    </argument>
+    <argument id="172" parent="41" name="@num">
+      <Position>1</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="173" parent="41" name="@page">
+      <Position>2</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="174" parent="41" name="@uid">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="175" parent="42" name="@uid">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="176" parent="42" name="@agentId">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

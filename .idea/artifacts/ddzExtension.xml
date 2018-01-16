@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ddzExtension">
+    <output-path>$PROJECT_DIR$/extensions/ddz_ext</output-path>
+    <root id="archive" name="ddzExtension.jar">
+      <element id="module-output" name="ddzExt" />
+    </root>
+  </artifact>
+</component>

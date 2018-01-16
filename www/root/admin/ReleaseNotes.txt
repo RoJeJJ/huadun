@@ -1,0 +1,117 @@
+=====================================
+SmartFoxServer 2X Administration Tool
+=====================================
+
+v1.4.0
+======
+
+New features
+------------
+- Demo version of Analytics module included. License can be purchased separately.
+- New Analytics tab added to Server Configurator module, to schedule daily or weekly log analysis to collect data for Analytics module. 
+- License Manager module now shows the details of the currently running license.
+- Room uptime added to Zone Monitor module under Runtime Room settings tab.
+
+Fixed bugs
+----------
+- BlueBox Monitor module throwing a NullPointerException when a client is connected through BB but not yet logged in.
+
+
+v1.3.2
+======
+
+New features
+------------
+- Button to reload bad words list added to Zone Monitor modules (see Zone monitoring panel, Runtime Zone settings tab).
+
+
+v1.3.1
+======
+
+Other
+-----
+- Admin Tool's minimum height reduced to 670px to prevent vertical resolution of some monitors being exceeded.
+
+
+v1.3.0
+======
+
+New features
+------------
+- License Manager module now shows active license options in the license test results.
+- Updated memory usage and system queues diagrams in Dashboard module.
+- "Remember me" option added to the server connection panel, to save access credentials when the connect button is clicked.
+
+Fixed bugs
+----------
+- UDP traffic not taken into account when drawing the network traffic diagram in Dashboard module.
+
+
+v1.2.2
+======
+
+New features
+------------
+- Split Room count added to Dashboard and Zone Monitor modules.
+- The "/extensions/__lib__" folder is now listed when selecting the name of the Extension to be assigned to a Zone/Room, in case the Extension's jar file was deployed there for specific class-loading purposes.
+
+
+v1.2.1
+======
+
+New features
+------------
+- New "HTML5 WebSockets" tab added to the Server Configurator module to activate and setup the HTML5 support.
+- More traffic details added to Dashboard module (max # of CCU, max # of sessions and total Rooms), now displayed in a table.
+
+Fixed bugs
+----------
+- Logical error when checking duplicate Zone/Room name in Zone Configurator module.
+
+
+v1.2.0
+======
+
+New features
+------------
+- Server version is now checked against the SFS website and an alert is displayed if a new version is available for download.
+
+Other
+-----
+- Runtime Statistics module renamed to Dashboard.
+- Updated total CCU count method in Dashboard (Runtime Statistics) module: now logged-in users (including NPC) are taken into account only, while before this was the total number of sessions.
+
+
+v1.1.1
+======
+
+New features
+------------
+- A blinking icon is displayed on the Administrators Chat panel button in case a message is received when the panel is collapsed.
+
+
+v1.1.0
+======
+
+New features
+------------
+- Text input added to the Zone Monitor, below the "Monitor selection" button, to send an Admin message to the selected Zone/Room/User.
+- Log Viewer module added.
+- Zone/Room Extension log messages panel added to the Zone Monitor module, to debug the Extension at runtime.
+- When creating a new Room using the Zone Monitor module, it is now possible to choose if a notification ("roomAdd" event) should be sent to clients or not.
+- New button added to Zone Monitor the remove an existing Room (if empty only).
+- Table column added to show the Room Variable owner in the Runtime Room Variables tab of the Zone Monitor.
+
+Fixed bugs
+----------
+- A null pointer exception was thrown on the server-side when accessing the BlueBox Monitor module and the web server was disabled.
+
+Other
+-----
+- Browser's cache skipped when loading a newly released version of the Admin Tool for the first time.
+
+
+v1.0.0
+======
+
+First release.

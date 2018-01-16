@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zoneExtension">
+    <output-path>$PROJECT_DIR$/extensions/zone_ext</output-path>
+    <root id="archive" name="zoneExtension.jar">
+      <element id="module-output" name="sfserver_huadun" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ldcExtension">
+    <output-path>$PROJECT_DIR$/extensions/ldc_ext</output-path>
+    <root id="archive" name="ldcExtension.jar">
+      <element id="module-output" name="ldcExt" />
+    </root>
+  </artifact>
+</component>

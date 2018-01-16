@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ddzExt/ddzExt.iml" filepath="$PROJECT_DIR$/ddzExt/ddzExt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ldcExt/ldcExt.iml" filepath="$PROJECT_DIR$/ldcExt/ldcExt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ldc_http/ldc_http.iml" filepath="$PROJECT_DIR$/ldc_http/ldc_http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfserver_huadun.iml" filepath="$PROJECT_DIR$/sfserver_huadun.iml" />
+    </modules>
+  </component>
+</project>

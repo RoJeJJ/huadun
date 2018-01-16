@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="model">
+    <output-path>$PROJECT_DIR$/extensions/__lib__</output-path>
+    <root id="archive" name="model.jar">
+      <element id="module-output" name="model" />
+    </root>
+  </artifact>
+</component>

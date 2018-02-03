@@ -450,7 +450,7 @@ public class DBUtil {
                                 String nickStr = "s"+i;
                                 String wlStr = "wl"+i;
                                 o.putInt(uidStr,set.getInt(uidStr));
-                                o.putUtfString(nickStr,new String(set.getString(nickStr).getBytes("utf-8")));
+                                o.putUtfString(nickStr,set.getString(nickStr));
                                 o.putInt(wlStr,set.getInt(wlStr));
                             }
                             array.addSFSObject(o);
@@ -495,7 +495,7 @@ public class DBUtil {
                                 String nickStr = "s"+i;
                                 String wlStr = "wl"+i;
                                 o.putInt(uidStr,set.getInt(uidStr));
-                                o.putUtfString(nickStr,new String(set.getString(nickStr).getBytes("utf-8")));
+                                o.putUtfString(nickStr,set.getString(nickStr));
                                 o.putInt(wlStr,set.getInt(wlStr));
                                 o.putUtfString(avatarStr,set.getString(avatarStr));
                             }

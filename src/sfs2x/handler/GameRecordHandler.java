@@ -10,7 +10,7 @@ public class GameRecordHandler extends BaseClientRequestHandler{
     public void handleClientRequest(User user, ISFSObject isfsObject) {
         String uuid = isfsObject.getUtfString("uuid");
         ISFSObject object = DBUtil.getGameRecord(uuid);
-        System.out.println(object.toJson());
+//        System.out.println(object.toJson());
         send("gr", object,user);
     }
 }

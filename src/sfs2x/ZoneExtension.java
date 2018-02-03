@@ -33,12 +33,13 @@ public class ZoneExtension extends SFSExtension {
         addRequestHandler(Command.PING, PingHandler.class);//接收ping
         addRequestHandler("cr", CreateRoomHandler.class);//创建房间
         addRequestHandler("jr", RequestJoinRoomHandler.class);//加入房间
-        addRequestHandler("ur", UserRoomHandler.class);
-        addRequestHandler("curRoom", UserCurRoomHandler.class);
-        addRequestHandler("dmr", DismissRoomHandler.class);
-        addRequestHandler("rr", RoomRecordHandler.class);
-        addRequestHandler("gr", GameRecordHandler.class);
-        addRequestHandler("sa", SetAgentHandler.class);
+        addRequestHandler("ur", UserRoomHandler.class);//已开房间
+        addRequestHandler("curRoom", UserCurRoomHandler.class);//
+        addRequestHandler("dmr", DismissRoomHandler.class);//解散房间
+        addRequestHandler("rr", RoomRecordHandler.class);////房间记录
+        addRequestHandler("gr", GameRecordHandler.class);//游戏记录
+        addRequestHandler("sa", SetAgentHandler.class);//设置代理
+        addRequestHandler("ku",KickUserHandler.class);//踢人
         deleteTask();
     }
 

@@ -39,13 +39,19 @@ public class CreateRoomHandler extends BaseClientRequestHandler {
         }
         if (gamecode == 0){ // 拉大车游戏
             Integer count = isfsObject.getInt("c"); // 局数
+            Integer sPo = isfsObject.getInt("s");
 
             if (count == null || (count != Constant.COUNT_LDC_1 && count != Constant.COUNT_LDC_2 && count != Constant.COUNT_LDC_3)){//参数错误
                 object.putInt("err",0);
                 send(Command.CREATE_ROOM,object,user);
                 return;
             }
-            LDCTable table = new LDCTable(count,1,true);
+            if (sPo == null || (sPo != 8 && sPo != 9)){
+                object.putInt("err",0);
+                send(Command.CREATE_ROOM,object,user);
+                return;
+            }
+            LDCTable table = new LDCTable(count,1,true,sPo);
             if (DBUtil.lockCard(player.getUserid(),table.getCost())){ //锁定房卡
                 CreateRoomSettings roomSettings = new CreateRoomSettings();
                 synchronized (Constant.ROOM_NAME_LOCK) {
@@ -56,7 +62,10 @@ public class CreateRoomHandler extends BaseClientRequestHandler {
                 roomSettings.setAutoRemoveMode(SFSRoomRemoveMode.NEVER_REMOVE);
                 roomSettings.setDynamic(true);
                 roomSettings.setGame(true);
-                roomSettings.setMaxUsers(6);
+                if (sPo == 9)
+                    roomSettings.setMaxUsers(5);
+                else
+                    roomSettings.setMaxUsers(6);
                 roomSettings.setMaxSpectators(0);
 
                 Map<Object,Object> map = new HashMap<>();

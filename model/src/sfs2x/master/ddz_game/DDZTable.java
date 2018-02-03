@@ -286,8 +286,12 @@ public class DDZTable extends ITable implements Runnable {
                                     userPlay(true, current.getPlayer(), current.tips.get(0));
                                 else
                                     userFold(true, current.getPlayer());
-                            } else
-                                userFold(true, current.getPlayer());
+                            } else if (current.hand.size() < 5){
+                                if (current.tips.size() > 0)
+                                    userPlay(true, current.getPlayer(), current.tips.get(0));
+                                else
+                                    userFold(true, current.getPlayer());
+                            }
                         }
                         actionWaitRemain = ACTION_WAIT_TIME;
                         actionWaitStart = System.currentTimeMillis();
@@ -731,15 +735,12 @@ public class DDZTable extends ITable implements Runnable {
                     }
                 }
             } else {
-                ext.trace("牌型错误");
                 if (user != null) {
                     object.putInt("err", 1);
                     ext.send("play", object, user);
                 }
-                return;
             }
         }
-        throw new IllegalArgumentException("错误的客户端请求?");
     }
 
     public synchronized void userFold(boolean server, Player p) {

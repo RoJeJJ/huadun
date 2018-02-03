@@ -19,7 +19,6 @@ public class UserPlayHandler extends BaseClientRequestHandler{
         ArrayList<Integer> play = (ArrayList<Integer>) isfsObject.getIntArray("play");
         if (play == null || play.size() == 0)
             return;
-//            throw new IllegalArgumentException("客户端没有把牌发过来?");
         table.userPlay(true,p,play);
     }
 }

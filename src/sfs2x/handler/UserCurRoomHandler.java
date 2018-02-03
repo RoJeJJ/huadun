@@ -19,15 +19,7 @@ public class UserCurRoomHandler extends BaseClientRequestHandler{
         for (Room room : getParentExtension().getParentZone().getRoomList()){
             ITable iTable = Utils.getTable(room);
             if (iTable.getOwnerId() == player.getUserid()){
-                ISFSObject o = new SFSObject();
-                o.putUtfString("n",room.getName()); //房间号
-                o.putInt("mod",iTable.getMod());//游戏类型
-                o.putBool("gs",iTable.isGameStart());//游戏是否开局
-                o.putInt("c",iTable.getCount());//总局数
-                o.putInt("cc",iTable.getCurCount());//当前局数
-                o.putInt("p",iTable.getMaxPerson());//总人数
-                o.putInt("cp",iTable.getCurrentPerson());//当前人数
-                array.addSFSObject(o);
+                array.addSFSObject(iTable.tableStatus(player));
             }
         }
         ISFSObject object = new SFSObject();

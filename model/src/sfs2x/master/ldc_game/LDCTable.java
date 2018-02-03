@@ -32,14 +32,15 @@ public class LDCTable extends ITable implements Runnable {
     private ISeat first;
     private ArrayList<LDCSeat> dealOrder;
     private ArrayList<LDCSeat> actionOrder;
-    private static final int[] face = new int[]{8, 9, 10, 11, 12, 13, 15};
+    private final int spo;
+    private final int[] face;
     private long actionWaitRemain;
     private long actionWaitStart;
     private int lastBet;
     private int curBet;
     private LDCSeat firstAction;
 
-    public LDCTable(int count, int base, boolean cardRoom) {
+    public LDCTable(int count, int base, boolean cardRoom,int spo) {
         super.count = count;
         this.base = base;
         super.cardRoom = cardRoom;
@@ -49,6 +50,11 @@ public class LDCTable extends ITable implements Runnable {
             cost = Constant.COST_LDC_2;
         else
             cost = Constant.COST_LDC_3;
+        this.spo = spo;
+        if (spo == 9)
+            face =   new int[]{ 9, 10, 11, 12, 13, 15};
+        else
+             face = new int[]{8, 9, 10, 11, 12, 13, 15};
         start = false;
         gameStart = false;
         takeOff = false;
@@ -226,11 +232,11 @@ public class LDCTable extends ITable implements Runnable {
                             status = LDCStatus.end;
                         else {
                             readyNewGame();
-                            delayAutoReady();
+//                            delayAutoReady();
                         }
                     } else {
                         readyNewGame();
-                        delayAutoReady();
+//                        delayAutoReady();
                     }
                     break;
                 case end:
@@ -463,7 +469,7 @@ public class LDCTable extends ITable implements Runnable {
                                 pokers.remove(Integer.valueOf(ranNum));
                             }else {
                                 ranNum = pokers.remove(0);
-                                cheatPokers.remove(Integer.valueOf(ranNum));
+//                                cheatPokers.remove(Integer.valueOf(ranNum));
                             }
                         }
                         if (pokers.size() == 0)
@@ -540,6 +546,7 @@ public class LDCTable extends ITable implements Runnable {
         object.putInt("pot", pot); //底池
         object.putInt("lb",lastBet);
         object.putInt("cb",curBet);
+        object.putInt("spo",spo);
         object.putInt("tableBet",getTotalBet());
         ISFSArray array = new SFSArray();
         for (ISeat seat : seats) {
@@ -662,36 +669,42 @@ public class LDCTable extends ITable implements Runnable {
                     int sn = seat.seen.get(i) / 4;
                     int bn = seat.blinds.get(i) / 4;
                     if (seat.seen.get(i) != seat.borrow){
-                        if (sn == 8)
-                            sc[0]++;
-                        else if (sn == 9)
-                            sc[1]++;
-                        else if (sn == 10)
-                            sc[2]++;
-                        else if (sn == 11)
-                            sc[3]++;
-                        else if (sn == 12)
-                            sc[4]++;
-                        else if (sn == 13)
-                            sc[5]++;
-                        else if (sn == 15)
-                            sc[6]++;
+                        for (int j=0;j<face.length;j++)
+                            if (sn == face[j])
+                                sc[j]++;
+//                        if (sn == 8)
+//                            sc[0]++;
+//                        else if (sn == 9)
+//                            sc[1]++;
+//                        else if (sn == 10)
+//                            sc[2]++;
+//                        else if (sn == 11)
+//                            sc[3]++;
+//                        else if (sn == 12)
+//                            sc[4]++;
+//                        else if (sn == 13)
+//                            sc[5]++;
+//                        else if (sn == 15)
+//                            sc[6]++;
                     }
                     if (seat.blinds.get(i) != seat.borrow){
-                        if (bn == 8)
-                            bc[0]++;
-                        else if (bn == 9)
-                            bc[1]++;
-                        else if (bn == 10)
-                            bc[2]++;
-                        else if (bn == 11)
-                            bc[3]++;
-                        else if (bn == 12)
-                            bc[4]++;
-                        else if (bn == 13)
-                            bc[5]++;
-                        else if (bn == 15)
-                            bc[6]++;
+                        for (int j=0;j<face.length;j++)
+                            if (bn == face[j])
+                                bc[j]++;
+//                        if (bn == 8)
+//                            bc[0]++;
+//                        else if (bn == 9)
+//                            bc[1]++;
+//                        else if (bn == 10)
+//                            bc[2]++;
+//                        else if (bn == 11)
+//                            bc[3]++;
+//                        else if (bn == 12)
+//                            bc[4]++;
+//                        else if (bn == 13)
+//                            bc[5]++;
+//                        else if (bn == 15)
+//                            bc[6]++;
                     }
                 }
                 for (int n : sc) {
@@ -721,7 +734,6 @@ public class LDCTable extends ITable implements Runnable {
         LDCSeat seat = (LDCSeat) getSeat(p);
         if (server || (status == LDCStatus.waitAction && current == seat && seat.startAction)){
             if (bet == 0){
-                if (turn != 1 || seat.seen.get(seat.seen.size() - 1)/4 != 15)
                 seat.fold = true;
                 seat.chipIn = true;
             }else {

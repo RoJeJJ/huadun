@@ -106,6 +106,13 @@ public abstract class ITable {
         }
         throw new IllegalArgumentException("getSeat()出错");
     }
+    public ISeat getSeat(int uid){
+        for (ISeat s:seats){
+            if (!s.isEmpty && s.mPlayer.getUserid() == uid)
+                return s;
+        }
+        return null;
+    }
 
     private boolean isExists(Player player){
         if (player == null)
@@ -183,6 +190,7 @@ public abstract class ITable {
                             object.putLong("card",card);
                             ext.getParentZone().getExtension().handleInternalMessage("card",object);
                         } else { //扣卡失败
+                            ext.trace("扣卡失败");
                             ext.getApi().removeRoom(room);
                         }
                     } else { //已经扣除房卡
@@ -294,6 +302,40 @@ public abstract class ITable {
                 userLeave(player);
                 if (getCurrentPerson() == 0)
                     ext.getApi().removeRoom(room);
+                else if (readyToStart()) { //可以开始游戏
+                    if (cardRoom) { //房卡房
+                        if (!takeOff) {
+                            long card = DBUtil.costCard(uuid, ownerId, cost);
+                            if (card >= 0) { //扣卡成功
+                                start = true;
+                                takeOff = true;
+                                ISFSObject object = new SFSObject();
+                                object.putInt("uid",ownerId);
+                                object.putLong("card",card);
+                                ext.getParentZone().getExtension().handleInternalMessage("card",object);
+                            } else { //扣卡失败
+                                ext.getApi().removeRoom(room);
+                            }
+                        } else { //已经扣除房卡
+                            start = true;
+                        }
+                    } else //金币房,直接开始游戏
+                        start = true;
+                    if (start) {
+                        gameStart = true;
+                        playSeat.clear();
+                        for (ISeat s : seats) {
+                            if (s.isReady())
+                                playSeat.add(s);
+                        }
+                        for (int i = 0; i < playSeat.size(); i++) {
+                            if (i == playSeat.size() - 1)
+                                playSeat.get(i).setNext(playSeat.get(0));
+                            else
+                                playSeat.get(i).setNext(playSeat.get(i + 1));
+                        }
+                    }
+                }
             } else { // 房间已经开局,不能离开房间,直接申请解散
                 if (!dissolve) {
                     dissolve = true;
@@ -403,6 +445,7 @@ public abstract class ITable {
     public void disConnected(Player player) {
         if (isExists(player)){
             Constant.offlinePlayer.put(player.getUserid(),player);
+            getSeat(player).offline = true;
             ISFSObject object = new SFSObject();
             object.putInt("uid",player.getUserid());
             object.putInt("seat", getSeatNo(player));
@@ -453,7 +496,7 @@ public abstract class ITable {
             @Override
             public void run() {
                 for (ISeat seat:seats){
-                    if (!seat.isReady()){
+                    if (!seat.isEmpty && !seat.isReady()){
                         playerReady(seat.getPlayer());
                     }
                 }

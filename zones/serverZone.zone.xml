@@ -144,8 +144,8 @@
     <driverName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverName>
     <connectionString>jdbc:sqlserver://localhost:1433;databaseName=LDC_DB</connectionString>
     <userName>sa</userName>
-    <password>#@$$#@!#%$#@WEr</password>
-    <!--<password>aa123123</password>-->
+    <!--<password>#@$$#@!#%$#@WEr</password>-->
+    <password>aa123123</password>
     <testSql>SELECT COUNT(*) FROM user_info</testSql>
     <maxActiveConnections>10</maxActiveConnections>
     <maxIdleConnections>10</maxIdleConnections>

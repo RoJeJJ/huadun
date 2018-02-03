@@ -12,7 +12,7 @@ public class RoomRecordHandler extends BaseClientRequestHandler{
     public void handleClientRequest(User user, ISFSObject isfsObject) {
         Player p = Utils.getPlayer(user);
         ISFSObject object = DBUtil.getRoomRecord(p.getUserid());
-        System.out.println(object.toJson());
+//        System.out.println(object.toJson());
         send("rr", object,user);
     }
 }
